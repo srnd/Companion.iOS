@@ -7,14 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C8E26BA40C9B8FC1602558 /* Pods_CodeDay_CompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40F7727CD801B36CCD9C311 /* Pods_CodeDay_CompanionTests.framework */; };
+		3201EE2920F0CACD003D0727 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3201EE2820F0CACD003D0727 /* MainController.swift */; };
+		3201EE2B20F0CD23003D0727 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3201EE2A20F0CD23003D0727 /* Announcement.swift */; };
+		3201EE2D20F0CDB1003D0727 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3201EE2C20F0CDB1003D0727 /* User.swift */; };
+		3210BA6620F0851C005C8A37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA6520F0851C005C8A37 /* Constants.swift */; };
+		3210BA6D20F08E02005C8A37 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA6C20F08E02005C8A37 /* UserStore.swift */; };
+		3210BA6F20F08EE0005C8A37 /* CompanionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA6E20F08EE0005C8A37 /* CompanionAPI.swift */; };
+		3210BA7120F08F79005C8A37 /* CompanionAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA7020F08F79005C8A37 /* CompanionAPIRouter.swift */; };
+		3210BA7420F096EE005C8A37 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA7320F096EE005C8A37 /* Registration.swift */; };
+		3210BA7620F09B84005C8A37 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA7520F09B84005C8A37 /* Event.swift */; };
+		3210BA7820F09D73005C8A37 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA7720F09D73005C8A37 /* Activity.swift */; };
+		3210BA7A20F09DF2005C8A37 /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA7920F09DF2005C8A37 /* Timestamp.swift */; };
+		3210BA7C20F09EAF005C8A37 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA7B20F09EAF005C8A37 /* Venue.swift */; };
+		3210BA7E20F09EE6005C8A37 /* VenueAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA7D20F09EE6005C8A37 /* VenueAddress.swift */; };
+		3210BA8020F09F4F005C8A37 /* VenueContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA7F20F09F4F005C8A37 /* VenueContact.swift */; };
+		3210BA8220F0A5E2005C8A37 /* CompanionAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA8120F0A5E2005C8A37 /* CompanionAPIError.swift */; };
+		3210BA8420F0ABB5005C8A37 /* EmailLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA8320F0ABB5005C8A37 /* EmailLoginResponse.swift */; };
+		3210BA8620F0B0AE005C8A37 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210BA8520F0B0AE005C8A37 /* Utils.swift */; };
+		321368ED20F0D5CE00AD120B /* AnnouncementViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321368EC20F0D5CE00AD120B /* AnnouncementViewCell.swift */; };
 		3230101120D58155006C7A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230101020D58155006C7A53 /* AppDelegate.swift */; };
-		3230101320D58155006C7A53 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230101220D58155006C7A53 /* FirstViewController.swift */; };
-		3230101520D58155006C7A53 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230101420D58155006C7A53 /* SecondViewController.swift */; };
+		3230101320D58155006C7A53 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230101220D58155006C7A53 /* DashboardController.swift */; };
+		3230101520D58155006C7A53 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230101420D58155006C7A53 /* ScheduleController.swift */; };
 		3230101820D58155006C7A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3230101620D58155006C7A53 /* Main.storyboard */; };
 		3230101A20D58157006C7A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3230101920D58157006C7A53 /* Assets.xcassets */; };
 		3230101D20D58157006C7A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3230101B20D58157006C7A53 /* LaunchScreen.storyboard */; };
 		3230102820D58157006C7A53 /* CodeDay_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230102720D58157006C7A53 /* CodeDay_CompanionTests.swift */; };
 		3230103320D58157006C7A53 /* CodeDay_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230103220D58157006C7A53 /* CodeDay_CompanionUITests.swift */; };
+		324A66FEC76E5E58AF1EFB3D /* Pods_CodeDay_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E50B2C289B72B5DCDB82353 /* Pods_CodeDay_Companion.framework */; };
+		325F66B020F07C6B00BF9A08 /* CheckInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F66AF20F07C6B00BF9A08 /* CheckInController.swift */; };
+		325F66B320F07CAA00BF9A08 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F66B220F07CAA00BF9A08 /* LoginController.swift */; };
+		32EEEF2920F0F470001A3AF9 /* ActivityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */; };
+		CAD05CBEAF84EC96BBE03FBC /* Pods_CodeDay_CompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12ADFCE757A309A75CC1329 /* Pods_CodeDay_CompanionUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +58,44 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3210BA6A20F08CD9005C8A37 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		15E1BB74E9B57DC7B84C3A86 /* Pods-CodeDay Companion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay Companion.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay Companion/Pods-CodeDay Companion.release.xcconfig"; sourceTree = "<group>"; };
+		2BF91739B7C3216743FFCE9C /* Pods-CodeDay CompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay CompanionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay CompanionUITests/Pods-CodeDay CompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3201EE2820F0CACD003D0727 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		3201EE2A20F0CD23003D0727 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		3201EE2C20F0CDB1003D0727 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3210BA6520F0851C005C8A37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3210BA6C20F08E02005C8A37 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		3210BA6E20F08EE0005C8A37 /* CompanionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionAPI.swift; sourceTree = "<group>"; };
+		3210BA7020F08F79005C8A37 /* CompanionAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionAPIRouter.swift; sourceTree = "<group>"; };
+		3210BA7320F096EE005C8A37 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		3210BA7520F09B84005C8A37 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		3210BA7720F09D73005C8A37 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		3210BA7920F09DF2005C8A37 /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
+		3210BA7B20F09EAF005C8A37 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		3210BA7D20F09EE6005C8A37 /* VenueAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAddress.swift; sourceTree = "<group>"; };
+		3210BA7F20F09F4F005C8A37 /* VenueContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueContact.swift; sourceTree = "<group>"; };
+		3210BA8120F0A5E2005C8A37 /* CompanionAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionAPIError.swift; sourceTree = "<group>"; };
+		3210BA8320F0ABB5005C8A37 /* EmailLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginResponse.swift; sourceTree = "<group>"; };
+		3210BA8520F0B0AE005C8A37 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		321368EC20F0D5CE00AD120B /* AnnouncementViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementViewCell.swift; sourceTree = "<group>"; };
 		3230100D20D58155006C7A53 /* CodeDay Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeDay Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3230101020D58155006C7A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3230101220D58155006C7A53 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		3230101420D58155006C7A53 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3230101220D58155006C7A53 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		3230101420D58155006C7A53 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
 		3230101720D58155006C7A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3230101920D58157006C7A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3230101C20D58157006C7A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +106,16 @@
 		3230102E20D58157006C7A53 /* CodeDay CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodeDay CompanionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3230103220D58157006C7A53 /* CodeDay_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDay_CompanionUITests.swift; sourceTree = "<group>"; };
 		3230103420D58157006C7A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325F66AF20F07C6B00BF9A08 /* CheckInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInController.swift; sourceTree = "<group>"; };
+		325F66B220F07CAA00BF9A08 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewCell.swift; sourceTree = "<group>"; };
+		554791FEA8E1E18D7DDC5D65 /* Pods-CodeDay CompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay CompanionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay CompanionTests/Pods-CodeDay CompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8180A0ED70815538619F4D7C /* Pods-CodeDay Companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay Companion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay Companion/Pods-CodeDay Companion.debug.xcconfig"; sourceTree = "<group>"; };
+		8E50B2C289B72B5DCDB82353 /* Pods_CodeDay_Companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeDay_Companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930BC8F3AD51042B24765585 /* Pods-CodeDay CompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay CompanionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay CompanionTests/Pods-CodeDay CompanionTests.release.xcconfig"; sourceTree = "<group>"; };
+		C12ADFCE757A309A75CC1329 /* Pods_CodeDay_CompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeDay_CompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C40F7727CD801B36CCD9C311 /* Pods_CodeDay_CompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeDay_CompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD8FCCED2A6D7D349D09595 /* Pods-CodeDay CompanionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay CompanionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay CompanionUITests/Pods-CodeDay CompanionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324A66FEC76E5E58AF1EFB3D /* Pods_CodeDay_Companion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C8E26BA40C9B8FC1602558 /* Pods_CodeDay_CompanionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +139,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD05CBEAF84EC96BBE03FBC /* Pods_CodeDay_CompanionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		204C0AEC0FEC48F957F1C4A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8180A0ED70815538619F4D7C /* Pods-CodeDay Companion.debug.xcconfig */,
+				15E1BB74E9B57DC7B84C3A86 /* Pods-CodeDay Companion.release.xcconfig */,
+				554791FEA8E1E18D7DDC5D65 /* Pods-CodeDay CompanionTests.debug.xcconfig */,
+				930BC8F3AD51042B24765585 /* Pods-CodeDay CompanionTests.release.xcconfig */,
+				DCD8FCCED2A6D7D349D09595 /* Pods-CodeDay CompanionUITests.debug.xcconfig */,
+				2BF91739B7C3216743FFCE9C /* Pods-CodeDay CompanionUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3210BA6B20F08DE6005C8A37 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3210BA7220F096D8005C8A37 /* Models */,
+				3210BA6E20F08EE0005C8A37 /* CompanionAPI.swift */,
+				3210BA7020F08F79005C8A37 /* CompanionAPIRouter.swift */,
+				3210BA8120F0A5E2005C8A37 /* CompanionAPIError.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3210BA7220F096D8005C8A37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3210BA7320F096EE005C8A37 /* Registration.swift */,
+				3210BA7520F09B84005C8A37 /* Event.swift */,
+				3210BA7720F09D73005C8A37 /* Activity.swift */,
+				3210BA7920F09DF2005C8A37 /* Timestamp.swift */,
+				3210BA7B20F09EAF005C8A37 /* Venue.swift */,
+				3210BA7D20F09EE6005C8A37 /* VenueAddress.swift */,
+				3210BA7F20F09F4F005C8A37 /* VenueContact.swift */,
+				3210BA8320F0ABB5005C8A37 /* EmailLoginResponse.swift */,
+				3201EE2A20F0CD23003D0727 /* Announcement.swift */,
+				3201EE2C20F0CDB1003D0727 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		321368EB20F0D5BC00AD120B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				321368EC20F0D5CE00AD120B /* AnnouncementViewCell.swift */,
+				32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3230100420D58155006C7A53 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +203,8 @@
 				3230102620D58157006C7A53 /* CodeDay CompanionTests */,
 				3230103120D58157006C7A53 /* CodeDay CompanionUITests */,
 				3230100E20D58155006C7A53 /* Products */,
+				204C0AEC0FEC48F957F1C4A3 /* Pods */,
+				E297C4F4067186358BD7D3C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +221,17 @@
 		3230100F20D58155006C7A53 /* CodeDay Companion */ = {
 			isa = PBXGroup;
 			children = (
+				321368EB20F0D5BC00AD120B /* Cells */,
+				3210BA6B20F08DE6005C8A37 /* API */,
+				325F66B120F07C7E00BF9A08 /* Controllers */,
 				3230101020D58155006C7A53 /* AppDelegate.swift */,
-				3230101220D58155006C7A53 /* FirstViewController.swift */,
-				3230101420D58155006C7A53 /* SecondViewController.swift */,
 				3230101620D58155006C7A53 /* Main.storyboard */,
 				3230101920D58157006C7A53 /* Assets.xcassets */,
 				3230101B20D58157006C7A53 /* LaunchScreen.storyboard */,
 				3230101E20D58157006C7A53 /* Info.plist */,
+				3210BA6520F0851C005C8A37 /* Constants.swift */,
+				3210BA6C20F08E02005C8A37 /* UserStore.swift */,
+				3210BA8520F0B0AE005C8A37 /* Utils.swift */,
 			);
 			path = "CodeDay Companion";
 			sourceTree = "<group>";
@@ -128,6 +254,28 @@
 			path = "CodeDay CompanionUITests";
 			sourceTree = "<group>";
 		};
+		325F66B120F07C7E00BF9A08 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3230101220D58155006C7A53 /* DashboardController.swift */,
+				3230101420D58155006C7A53 /* ScheduleController.swift */,
+				325F66AF20F07C6B00BF9A08 /* CheckInController.swift */,
+				325F66B220F07CAA00BF9A08 /* LoginController.swift */,
+				3201EE2820F0CACD003D0727 /* MainController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E297C4F4067186358BD7D3C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E50B2C289B72B5DCDB82353 /* Pods_CodeDay_Companion.framework */,
+				C40F7727CD801B36CCD9C311 /* Pods_CodeDay_CompanionTests.framework */,
+				C12ADFCE757A309A75CC1329 /* Pods_CodeDay_CompanionUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +283,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3230103720D58157006C7A53 /* Build configuration list for PBXNativeTarget "CodeDay Companion" */;
 			buildPhases = (
+				36580DADC7AC756520AE1362 /* [CP] Check Pods Manifest.lock */,
 				3230100920D58155006C7A53 /* Sources */,
 				3230100A20D58155006C7A53 /* Frameworks */,
 				3230100B20D58155006C7A53 /* Resources */,
+				2803312C01F7BFA8FB99558F /* [CP] Embed Pods Frameworks */,
+				3210BA6A20F08CD9005C8A37 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +303,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3230103A20D58157006C7A53 /* Build configuration list for PBXNativeTarget "CodeDay CompanionTests" */;
 			buildPhases = (
+				CCD494F76A46FA347BAFA136 /* [CP] Check Pods Manifest.lock */,
 				3230101F20D58157006C7A53 /* Sources */,
 				3230102020D58157006C7A53 /* Frameworks */,
 				3230102120D58157006C7A53 /* Resources */,
@@ -170,6 +322,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3230103D20D58157006C7A53 /* Build configuration list for PBXNativeTarget "CodeDay CompanionUITests" */;
 			buildPhases = (
+				595A52D7085B6C804B705AE2 /* [CP] Check Pods Manifest.lock */,
 				3230102A20D58157006C7A53 /* Sources */,
 				3230102B20D58157006C7A53 /* Frameworks */,
 				3230102C20D58157006C7A53 /* Resources */,
@@ -254,14 +407,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2803312C01F7BFA8FB99558F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CodeDay Companion/Pods-CodeDay Companion-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeDay Companion/Pods-CodeDay Companion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36580DADC7AC756520AE1362 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CodeDay Companion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		595A52D7085B6C804B705AE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CodeDay CompanionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCD494F76A46FA347BAFA136 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CodeDay CompanionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3230100920D58155006C7A53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3230101520D58155006C7A53 /* SecondViewController.swift in Sources */,
+				3230101520D58155006C7A53 /* ScheduleController.swift in Sources */,
+				3210BA7620F09B84005C8A37 /* Event.swift in Sources */,
+				3210BA6D20F08E02005C8A37 /* UserStore.swift in Sources */,
+				3210BA7C20F09EAF005C8A37 /* Venue.swift in Sources */,
+				3201EE2920F0CACD003D0727 /* MainController.swift in Sources */,
 				3230101120D58155006C7A53 /* AppDelegate.swift in Sources */,
-				3230101320D58155006C7A53 /* FirstViewController.swift in Sources */,
+				3210BA6F20F08EE0005C8A37 /* CompanionAPI.swift in Sources */,
+				3210BA7A20F09DF2005C8A37 /* Timestamp.swift in Sources */,
+				3230101320D58155006C7A53 /* DashboardController.swift in Sources */,
+				32EEEF2920F0F470001A3AF9 /* ActivityViewCell.swift in Sources */,
+				3210BA7E20F09EE6005C8A37 /* VenueAddress.swift in Sources */,
+				3201EE2D20F0CDB1003D0727 /* User.swift in Sources */,
+				3210BA7820F09D73005C8A37 /* Activity.swift in Sources */,
+				325F66B020F07C6B00BF9A08 /* CheckInController.swift in Sources */,
+				325F66B320F07CAA00BF9A08 /* LoginController.swift in Sources */,
+				3210BA8020F09F4F005C8A37 /* VenueContact.swift in Sources */,
+				3210BA8420F0ABB5005C8A37 /* EmailLoginResponse.swift in Sources */,
+				3210BA7120F08F79005C8A37 /* CompanionAPIRouter.swift in Sources */,
+				3210BA8220F0A5E2005C8A37 /* CompanionAPIError.swift in Sources */,
+				321368ED20F0D5CE00AD120B /* AnnouncementViewCell.swift in Sources */,
+				3210BA7420F096EE005C8A37 /* Registration.swift in Sources */,
+				3201EE2B20F0CD23003D0727 /* Announcement.swift in Sources */,
+				3210BA8620F0B0AE005C8A37 /* Utils.swift in Sources */,
+				3210BA6620F0851C005C8A37 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,16 +689,21 @@
 		};
 		3230103820D58157006C7A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8180A0ED70815538619F4D7C /* Pods-CodeDay Companion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AN8JL7Z2TB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CodeDay Companion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.srnd.CodeDay-Companion";
+				PRODUCT_BUNDLE_IDENTIFIER = org.codeday.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,16 +712,21 @@
 		};
 		3230103920D58157006C7A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E1BB74E9B57DC7B84C3A86 /* Pods-CodeDay Companion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AN8JL7Z2TB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CodeDay Companion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.srnd.CodeDay-Companion";
+				PRODUCT_BUNDLE_IDENTIFIER = org.codeday.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,6 +735,7 @@
 		};
 		3230103B20D58157006C7A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 554791FEA8E1E18D7DDC5D65 /* Pods-CodeDay CompanionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +757,7 @@
 		};
 		3230103C20D58157006C7A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 930BC8F3AD51042B24765585 /* Pods-CodeDay CompanionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +779,7 @@
 		};
 		3230103E20D58157006C7A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD8FCCED2A6D7D349D09595 /* Pods-CodeDay CompanionUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +800,7 @@
 		};
 		3230103F20D58157006C7A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BF91739B7C3216743FFCE9C /* Pods-CodeDay CompanionUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
