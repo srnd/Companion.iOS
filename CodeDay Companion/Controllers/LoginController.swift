@@ -10,26 +10,70 @@ import UIKit
 import BarcodeScanner
 import Disk
 
-// TODO: Dark status bar for this view.
 class LoginController: UIViewController, BarcodeScannerCodeDelegate, BarcodeScannerDismissalDelegate {
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    @IBAction func loginButtonPress(_ sender: UIButton) {
+        loginButton.isEnabled = false
+        completeLoginWithEmail(email: emailField.text)
+    }
+    
+    @IBAction func returnKeyPressed(_ sender: UITextField) {
+        loginButton.isEnabled = false
+        completeLoginWithEmail(email: emailField.text)
+    }
+    
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
-        controller.dismiss(animated: true) { self.completeLogin(ticketId: code) }
+        controller.dismiss(animated: true) { self.completeLoginWithId(ticketId: code) }
     }
     
     func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
     
-    func completeLogin(ticketId: String) {
+    func completeLoginWithEmail(email: String?) {
+        if email == nil || email != nil && email == "" {
+            let alert = UIAlertController(title: "Enter your email.", message: "We need your email to find your CodeDay ticket.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.loginButton.isEnabled = true
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            let loadingAlert = Utils.loadingAlert("Finding your ticket...")
+            present(loadingAlert, animated: true, completion: nil)
+            
+            CompanionAPI.getRegistrationByEmail(email!) { registration, error in
+                loadingAlert.dismiss(animated: false) {
+                    if error == nil && registration!.ok == true {
+                        if UserStore.setUserRegistration(registration!) {
+                            self.performSegue(withIdentifier: "loginToMain", sender: nil)
+                        } else {
+                            let alert = UIAlertController(title: "Something went wrong.", message: "We weren't able to log you in. Please try again.", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            self.loginButton.isEnabled = true
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    } else {
+                        let alert = UIAlertController(title: "Something went wrong.", message: "We couldn't find your ticket. Please make sure you're typing the same email you used to register for CodeDay.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default))
+                        self.loginButton.isEnabled = true
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
+    }
+    
+    func completeLoginWithId(ticketId: String) {
         let loadingAlert = Utils.loadingAlert("Finding your ticket...")
         present(loadingAlert, animated: true, completion: nil)
 
         CompanionAPI.getRegistrationById(ticketId) { registration, error in
-            loadingAlert.dismiss(animated: true) {
+            loadingAlert.dismiss(animated: false) {
                 if error == nil && registration!.ok == true {
                     if UserStore.setUserRegistration(registration!) {
                         self.performSegue(withIdentifier: "loginToMain", sender: nil)
@@ -53,7 +97,7 @@ class LoginController: UIViewController, BarcodeScannerCodeDelegate, BarcodeScan
     
     @IBAction func clickLogin(_ sender: UIButton) {
         if TARGET_OS_SIMULATOR == 1 {
-            completeLogin(ticketId: "cy7e74dxcyunbpp")
+            completeLoginWithId(ticketId: "cy7e74dxcyunbpp")
         } else {
             // we have a real device
             let viewController = BarcodeScannerViewController()
