@@ -14,6 +14,14 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     var schedule: [[Activity]] = [ ]
     var cellHeights: [IndexPath : CGFloat] = [:]
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let activity = schedule[indexPath.section][indexPath.row]
+        if activity.url != nil {
+            UIApplication.shared.open(URL(string: activity.url!)!)
+        }
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -52,6 +60,14 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             cell.descriptionLabel.isHidden = false
             cell.descriptionLabel.text = activity.description
+        }
+        
+        if activity.url == nil {
+            cell.accessoryType = .none
+            cell.selectionStyle = .none
+        } else {
+            cell.accessoryType = .disclosureIndicator
+            cell.selectionStyle = .gray
         }
         
         switch activity.type {
