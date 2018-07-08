@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  CheckInController.swift
 //  CodeDay Companion
 //
 //  Created by TJ Horner on 6/16/18.

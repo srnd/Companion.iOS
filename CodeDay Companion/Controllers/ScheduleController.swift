@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ScheduleController.swift
 //  CodeDay Companion
 //
 //  Created by TJ Horner on 6/16/18.
@@ -13,6 +13,10 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var schedule: [[Activity]] = [ ]
     var cellHeights: [IndexPath : CGFloat] = [:]
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return schedule.count
