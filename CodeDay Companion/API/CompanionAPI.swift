@@ -50,4 +50,15 @@ class CompanionAPI {
             }
         }
     }
+    
+    static func checkInTicketId(_ ticketId: String, completion: @escaping (CheckInResponse?, Error?) -> Void) {
+        Alamofire.request(CompanionAPIRouter.checkIn(ticketId: ticketId)).responseString { response in
+            do {
+                completion(try decodeResponse(CheckInResponse.self, res: response), nil)
+            } catch {
+                print("Companion API error: \(error)")
+                completion(nil, error)
+            }
+        }
+    }
 }

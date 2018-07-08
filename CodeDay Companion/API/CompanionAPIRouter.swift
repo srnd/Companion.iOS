@@ -14,6 +14,7 @@ enum CompanionAPIRouter : URLRequestConvertible {
     case getTicketById(ticketId: String)
     case getTicketByEmail(email: String)
     case getEventAnnouncements(eventId: String)
+    case checkIn(ticketId: String)
     
     func asURLRequest() throws -> URLRequest {
         let result: (path: String, parameters: Parameters) = {
@@ -24,6 +25,8 @@ enum CompanionAPIRouter : URLRequestConvertible {
                 return ("/login", [ "email": email ])
             case let .getEventAnnouncements(eventId):
                 return ("/announcements/\(eventId)", [:])
+            case let .checkIn(ticketId):
+                return ("/checkin/\(ticketId)", [:])
             }
         }()
         
