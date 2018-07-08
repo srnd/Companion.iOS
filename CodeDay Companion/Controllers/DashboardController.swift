@@ -14,6 +14,7 @@ class DashboardController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var announcements: [Announcement] = [ ]
+    var reg: Registration?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -21,7 +22,7 @@ class DashboardController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let reg = UserStore.getUserRegistration()
+        reg = UserStore.getUserRegistration()
         
         CompanionAPI.getAnnouncementsForEvent(reg!.event.id) { announcements, error in
             if error == nil {
@@ -56,31 +57,37 @@ class DashboardController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return announcements.count
+        return announcements.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AnnouncementCell")! as! AnnouncementViewCell
-        let announcement = announcements[indexPath.row]
-        
-        cell.announcementBodyLabel.text = announcement.body
-        cell.authorNameLabel.text = announcement.creator.name
-        
-        if announcement.link == nil {
-            cell.announcementLinkButton.isHidden = true
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "WelcomeCell")! as! WelcomeViewCell
+            cell.welcomeLabel.text = "Hey there, \(reg?.firstName ?? "attendee")!"
+            return cell
         } else {
-            cell.announcementLinkButton.isHidden = false
-            cell.announcementLinkButton.setTitle(announcement.link!.text, for: .normal)
-            cell.buttonUrl = announcement.link!.url
-        }
-        
-        Alamofire.request("https://s5.studentrnd.org/photo/\(announcement.creator.username)_128/1.png").responseImage { response in
-            if let image = response.result.value {
-                cell.authorPictureView.image = image.af_imageRoundedIntoCircle()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AnnouncementCell")! as! AnnouncementViewCell
+            let announcement = announcements[indexPath.row - 1]
+            
+            cell.announcementBodyLabel.text = announcement.body
+            cell.authorNameLabel.text = announcement.creator.name
+            
+            if announcement.link == nil {
+                cell.announcementLinkButton.isHidden = true
+            } else {
+                cell.announcementLinkButton.isHidden = false
+                cell.announcementLinkButton.setTitle(announcement.link!.text, for: .normal)
+                cell.buttonUrl = announcement.link!.url
             }
+            
+            Alamofire.request("https://s5.studentrnd.org/photo/\(announcement.creator.username)_128/1.png").responseImage { response in
+                if let image = response.result.value {
+                    cell.authorPictureView.image = image.af_imageRoundedIntoCircle()
+                }
+            }
+            
+            return cell
         }
-        
-        return cell
     }
 
     override func didReceiveMemoryWarning() {

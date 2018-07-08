@@ -37,6 +37,7 @@
 		324A66FEC76E5E58AF1EFB3D /* Pods_CodeDay_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E50B2C289B72B5DCDB82353 /* Pods_CodeDay_Companion.framework */; };
 		325F66B020F07C6B00BF9A08 /* CheckInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F66AF20F07C6B00BF9A08 /* CheckInController.swift */; };
 		325F66B320F07CAA00BF9A08 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F66B220F07CAA00BF9A08 /* LoginController.swift */; };
+		32DF0B3720F1A2D30070FFFF /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DF0B3620F1A2D30070FFFF /* WelcomeViewCell.swift */; };
 		32EEEF2920F0F470001A3AF9 /* ActivityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */; };
 		CAD05CBEAF84EC96BBE03FBC /* Pods_CodeDay_CompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12ADFCE757A309A75CC1329 /* Pods_CodeDay_CompanionUITests.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,7 @@
 		3230103420D58157006C7A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		325F66AF20F07C6B00BF9A08 /* CheckInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInController.swift; sourceTree = "<group>"; };
 		325F66B220F07CAA00BF9A08 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		32DF0B3620F1A2D30070FFFF /* WelcomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewCell.swift; sourceTree = "<group>"; };
 		32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewCell.swift; sourceTree = "<group>"; };
 		554791FEA8E1E18D7DDC5D65 /* Pods-CodeDay CompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay CompanionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay CompanionTests/Pods-CodeDay CompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8180A0ED70815538619F4D7C /* Pods-CodeDay Companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay Companion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay Companion/Pods-CodeDay Companion.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				321368EC20F0D5CE00AD120B /* AnnouncementViewCell.swift */,
 				32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */,
+				32DF0B3620F1A2D30070FFFF /* WelcomeViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 			files = (
 				3230101520D58155006C7A53 /* ScheduleController.swift in Sources */,
 				3210BA7620F09B84005C8A37 /* Event.swift in Sources */,
+				32DF0B3720F1A2D30070FFFF /* WelcomeViewCell.swift in Sources */,
 				3210BA6D20F08E02005C8A37 /* UserStore.swift in Sources */,
 				3210BA7C20F09EAF005C8A37 /* Venue.swift in Sources */,
 				3201EE2920F0CACD003D0727 /* MainController.swift in Sources */,
@@ -706,7 +710,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.codeday.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -729,7 +733,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.codeday.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
