@@ -10,4 +10,5 @@ import UIKit
 
 class WelcomeViewCell : UITableViewCell {
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var daysUntilLabel: UILabel!
 }

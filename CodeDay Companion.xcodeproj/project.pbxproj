@@ -37,6 +37,14 @@
 		324A66FEC76E5E58AF1EFB3D /* Pods_CodeDay_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E50B2C289B72B5DCDB82353 /* Pods_CodeDay_Companion.framework */; };
 		325F66B020F07C6B00BF9A08 /* CheckInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F66AF20F07C6B00BF9A08 /* CheckInController.swift */; };
 		325F66B320F07CAA00BF9A08 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F66B220F07CAA00BF9A08 /* LoginController.swift */; };
+		327215A520F2CFE800A13ABA /* DashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327215A420F2CFE800A13ABA /* DashboardCard.swift */; };
+		327215A720F2D08100A13ABA /* SpotifyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327215A620F2D08100A13ABA /* SpotifyCard.swift */; };
+		327215A920F2D0B600A13ABA /* AnnouncementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327215A820F2D0B600A13ABA /* AnnouncementCard.swift */; };
+		327215AB20F2D20A00A13ABA /* WelcomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327215AA20F2D20A00A13ABA /* WelcomeCard.swift */; };
+		327215AD20F2D46E00A13ABA /* NowPlayingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327215AC20F2D46E00A13ABA /* NowPlayingResponse.swift */; };
+		327215AF20F2D4C100A13ABA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327215AE20F2D4C100A13ABA /* Song.swift */; };
+		327215B120F2D4E800A13ABA /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327215B020F2D4E800A13ABA /* Album.swift */; };
+		327215B420F2D71800A13ABA /* SpotifyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327215B320F2D71800A13ABA /* SpotifyViewCell.swift */; };
 		327BE7DD20F259EC00F4E525 /* CheckInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BE7DC20F259EC00F4E525 /* CheckInResponse.swift */; };
 		32DF0B3720F1A2D30070FFFF /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DF0B3620F1A2D30070FFFF /* WelcomeViewCell.swift */; };
 		32EEEF2920F0F470001A3AF9 /* ActivityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */; };
@@ -110,6 +118,14 @@
 		3230103420D58157006C7A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		325F66AF20F07C6B00BF9A08 /* CheckInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInController.swift; sourceTree = "<group>"; };
 		325F66B220F07CAA00BF9A08 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		327215A420F2CFE800A13ABA /* DashboardCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCard.swift; sourceTree = "<group>"; };
+		327215A620F2D08100A13ABA /* SpotifyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyCard.swift; sourceTree = "<group>"; };
+		327215A820F2D0B600A13ABA /* AnnouncementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCard.swift; sourceTree = "<group>"; };
+		327215AA20F2D20A00A13ABA /* WelcomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCard.swift; sourceTree = "<group>"; };
+		327215AC20F2D46E00A13ABA /* NowPlayingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingResponse.swift; sourceTree = "<group>"; };
+		327215AE20F2D4C100A13ABA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		327215B020F2D4E800A13ABA /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		327215B320F2D71800A13ABA /* SpotifyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyViewCell.swift; sourceTree = "<group>"; };
 		327BE7DC20F259EC00F4E525 /* CheckInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInResponse.swift; sourceTree = "<group>"; };
 		32DF0B3620F1A2D30070FFFF /* WelcomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewCell.swift; sourceTree = "<group>"; };
 		32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewCell.swift; sourceTree = "<group>"; };
@@ -177,6 +193,7 @@
 		3210BA7220F096D8005C8A37 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				327215B220F2D53C00A13ABA /* Responses */,
 				3210BA7320F096EE005C8A37 /* Registration.swift */,
 				3210BA7520F09B84005C8A37 /* Event.swift */,
 				3210BA7720F09D73005C8A37 /* Activity.swift */,
@@ -184,10 +201,10 @@
 				3210BA7B20F09EAF005C8A37 /* Venue.swift */,
 				3210BA7D20F09EE6005C8A37 /* VenueAddress.swift */,
 				3210BA7F20F09F4F005C8A37 /* VenueContact.swift */,
-				3210BA8320F0ABB5005C8A37 /* EmailLoginResponse.swift */,
 				3201EE2A20F0CD23003D0727 /* Announcement.swift */,
 				3201EE2C20F0CDB1003D0727 /* User.swift */,
-				327BE7DC20F259EC00F4E525 /* CheckInResponse.swift */,
+				327215AE20F2D4C100A13ABA /* Song.swift */,
+				327215B020F2D4E800A13ABA /* Album.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +215,7 @@
 				321368EC20F0D5CE00AD120B /* AnnouncementViewCell.swift */,
 				32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */,
 				32DF0B3620F1A2D30070FFFF /* WelcomeViewCell.swift */,
+				327215B320F2D71800A13ABA /* SpotifyViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -227,6 +245,7 @@
 		3230100F20D58155006C7A53 /* CodeDay Companion */ = {
 			isa = PBXGroup;
 			children = (
+				327215A320F2CFD300A13ABA /* Cards */,
 				321368EB20F0D5BC00AD120B /* Cells */,
 				3210BA6B20F08DE6005C8A37 /* API */,
 				325F66B120F07C7E00BF9A08 /* Controllers */,
@@ -270,6 +289,27 @@
 				3201EE2820F0CACD003D0727 /* MainController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		327215A320F2CFD300A13ABA /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				327215A420F2CFE800A13ABA /* DashboardCard.swift */,
+				327215A620F2D08100A13ABA /* SpotifyCard.swift */,
+				327215A820F2D0B600A13ABA /* AnnouncementCard.swift */,
+				327215AA20F2D20A00A13ABA /* WelcomeCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		327215B220F2D53C00A13ABA /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				327215AC20F2D46E00A13ABA /* NowPlayingResponse.swift */,
+				327BE7DC20F259EC00F4E525 /* CheckInResponse.swift */,
+				3210BA8320F0ABB5005C8A37 /* EmailLoginResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		E297C4F4067186358BD7D3C1 /* Frameworks */ = {
@@ -426,6 +466,7 @@
 				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -434,6 +475,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -501,12 +543,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327215A720F2D08100A13ABA /* SpotifyCard.swift in Sources */,
 				3230101520D58155006C7A53 /* ScheduleController.swift in Sources */,
 				3210BA7620F09B84005C8A37 /* Event.swift in Sources */,
 				32DF0B3720F1A2D30070FFFF /* WelcomeViewCell.swift in Sources */,
 				3210BA6D20F08E02005C8A37 /* UserStore.swift in Sources */,
+				327215A920F2D0B600A13ABA /* AnnouncementCard.swift in Sources */,
 				3210BA7C20F09EAF005C8A37 /* Venue.swift in Sources */,
 				3201EE2920F0CACD003D0727 /* MainController.swift in Sources */,
+				327215B120F2D4E800A13ABA /* Album.swift in Sources */,
+				327215AB20F2D20A00A13ABA /* WelcomeCard.swift in Sources */,
 				3230101120D58155006C7A53 /* AppDelegate.swift in Sources */,
 				3210BA6F20F08EE0005C8A37 /* CompanionAPI.swift in Sources */,
 				3210BA7A20F09DF2005C8A37 /* Timestamp.swift in Sources */,
@@ -515,18 +561,22 @@
 				3210BA7E20F09EE6005C8A37 /* VenueAddress.swift in Sources */,
 				3201EE2D20F0CDB1003D0727 /* User.swift in Sources */,
 				3210BA7820F09D73005C8A37 /* Activity.swift in Sources */,
+				327215A520F2CFE800A13ABA /* DashboardCard.swift in Sources */,
 				325F66B020F07C6B00BF9A08 /* CheckInController.swift in Sources */,
 				325F66B320F07CAA00BF9A08 /* LoginController.swift in Sources */,
 				3210BA8020F09F4F005C8A37 /* VenueContact.swift in Sources */,
 				3210BA8420F0ABB5005C8A37 /* EmailLoginResponse.swift in Sources */,
+				327215B420F2D71800A13ABA /* SpotifyViewCell.swift in Sources */,
 				3210BA7120F08F79005C8A37 /* CompanionAPIRouter.swift in Sources */,
 				3210BA8220F0A5E2005C8A37 /* CompanionAPIError.swift in Sources */,
 				327BE7DD20F259EC00F4E525 /* CheckInResponse.swift in Sources */,
 				321368ED20F0D5CE00AD120B /* AnnouncementViewCell.swift in Sources */,
 				3210BA7420F096EE005C8A37 /* Registration.swift in Sources */,
 				3201EE2B20F0CD23003D0727 /* Announcement.swift in Sources */,
+				327215AF20F2D4C100A13ABA /* Song.swift in Sources */,
 				3210BA8620F0B0AE005C8A37 /* Utils.swift in Sources */,
 				3210BA6620F0851C005C8A37 /* Constants.swift in Sources */,
+				327215AD20F2D46E00A13ABA /* NowPlayingResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

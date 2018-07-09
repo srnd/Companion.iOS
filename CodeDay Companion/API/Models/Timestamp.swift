@@ -6,6 +6,8 @@
 //  Copyright © 2018 srnd.org. All rights reserved.
 //
 
+import SwiftDate
+
 // This object represents a Laravel JSON-encoded date.
 // Thanks, Laravel.
 struct Timestamp : Codable {
@@ -17,5 +19,9 @@ struct Timestamp : Codable {
         case date
         case timezoneType = "timezone_type"
         case timezone
+    }
+    
+    func toDate() -> DateInRegion {
+        return self.date.toDate()!
     }
 }

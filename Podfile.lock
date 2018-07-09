@@ -5,6 +5,7 @@ PODS:
   - BarcodeScanner (4.1.3)
   - Disk (0.3.3)
   - QRCode (2.0)
+  - SwiftDate (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - BarcodeScanner
   - Disk
   - QRCode
+  - SwiftDate
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -20,6 +22,7 @@ SPEC REPOS:
     - BarcodeScanner
     - Disk
     - QRCode
+    - SwiftDate
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -27,7 +30,8 @@ SPEC CHECKSUMS:
   BarcodeScanner: fce1ad2b3f28286b1ab5091fe0979789618bee27
   Disk: d1f55cd61f6ca20f368232d0c6e37e3c3dfcb63e
   QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
+  SwiftDate: d596c5f65010fb56ad59d54f40ec7aeaa885d01a
 
-PODFILE CHECKSUM: 7af2f5212a05f50bffc5e9ff40b509200b968be5
+PODFILE CHECKSUM: 2d0fea5425cfdf753a5e4934ca88dd06df7ab475
 
 COCOAPODS: 1.5.3

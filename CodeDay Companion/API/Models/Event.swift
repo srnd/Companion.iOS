@@ -11,8 +11,8 @@ struct Event : Codable {
     var region: String
     var name: String
     var schedule: Dictionary<String, [Activity]>
-    var startsAt: Int
-    var endsAt: Int
+    var startsAt: Double
+    var endsAt: Double
     var venue: Venue?
     
     enum CodingKeys : String, CodingKey {

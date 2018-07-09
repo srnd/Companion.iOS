@@ -14,7 +14,9 @@ class DashboardController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var announcements: [Announcement] = [ ]
+    var cards: [DashboardCard] = [ ]
     var reg: Registration?
+    var nowPlaying: Song?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -24,6 +26,18 @@ class DashboardController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         reg = UserStore.getUserRegistration()
         
+        self.announcements = UserStore.getAnnouncements()
+        
+        tableView.dataSource = self
+        tableView.separatorInset = UIEdgeInsets.zero
+        
+        reloadTableView()
+        
+        // Load new announcements in
+        refresh()
+    }
+    
+    private func refresh() {
         CompanionAPI.getAnnouncementsForEvent(reg!.event.id) { announcements, error in
             if error == nil {
                 var cachedAnnouncements = UserStore.getAnnouncements()
@@ -40,16 +54,61 @@ class DashboardController: UIViewController, UITableViewDataSource {
                     UserStore.setAnnouncements(cachedAnnouncements)
                     
                     self.announcements = cachedAnnouncements
+                    self.reloadTableView()
+                    // sorry
                     self.tableView.reloadData()
                 }
             }
         }
         
-        self.announcements = UserStore.getAnnouncements()
-        self.tableView.reloadData()
+        if Utils.isItCodeDay() {
+            CompanionAPI.getNowPlaying(reg!.event.id) { response, error in
+                if error == nil && response?.nowPlaying != nil {
+                    self.nowPlaying = response!.nowPlaying!
+                    self.reloadTableView()
+                }
+            }
+        }
+    }
+    
+    private func reloadTableView() {
+        tableView.beginUpdates()
         
-        tableView.dataSource = self
-        tableView.separatorInset = UIEdgeInsets.zero
+        // Empty out the cards except for our welcome one
+        cards = [ WelcomeCard() ]
+        
+        if nowPlaying != nil {
+            cards.append(SpotifyCard(nowPlaying!))
+            tableView.insertRows(at: [ IndexPath(row: cards.count - 1, section: 0) ], with: UITableViewRowAnimation.fade)
+        }
+        
+        if !Utils.isItCodeDay() && Utils.daysUntilCodeDay() > 0 {
+            cards.append(AnnouncementCard(Announcement(
+                body: "Are you excited for CodeDay, \(reg!.firstName)? I know I am. It's is a lot more fun with friends, so why not invite them?",
+                creator: User(username: "johnpeter", name: "John Peter"),
+                link: Announcement.AnnouncementLink(url: "https://codeday.org/share", text: "Share CodeDay")
+            )))
+            
+            if announcements.count == 0 {
+                cards.append(AnnouncementCard(Announcement(
+                    body: "It's pretty empty around here right now, but during CodeDay you can use the app to get announcements from the organizers, see the currently playing song, take a look at the activity schedule, and (my personal favorite!) check yourself in so you can skip those long check-in lines.",
+                    creator: User(username: "johnpeter", name: "John Peter"),
+                    link: nil
+                )))
+            }
+        } else if Utils.daysUntilCodeDay() < 0 {
+            cards.append(AnnouncementCard(Announcement(
+                body: "I hope you had fun at CodeDay! Why not give us some feedback on how we did? It'll help us improve.",
+                creator: User(username: "johnpeter", name: "John Peter"),
+                link: Announcement.AnnouncementLink(url: "https://codeday.vip/\(reg!.id)/feedback", text: "Share your feedback")
+            )))
+        }
+        
+        announcements.forEach { announcement in
+            cards.append(AnnouncementCard(announcement))
+        }
+        
+        tableView.endUpdates()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,42 +116,15 @@ class DashboardController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return announcements.count + 1
+        return cards.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "WelcomeCell")! as! WelcomeViewCell
-            cell.welcomeLabel.text = "Hey there, \(reg?.firstName ?? "attendee")!"
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AnnouncementCell")! as! AnnouncementViewCell
-            let announcement = announcements[indexPath.row - 1]
-            
-            cell.announcementBodyLabel.text = announcement.body
-            cell.authorNameLabel.text = announcement.creator.name
-            
-            if announcement.link == nil {
-                cell.announcementLinkButton.isHidden = true
-            } else {
-                cell.announcementLinkButton.isHidden = false
-                cell.announcementLinkButton.setTitle(announcement.link!.text, for: .normal)
-                cell.buttonUrl = announcement.link!.url
-            }
-            
-            Alamofire.request("https://s5.studentrnd.org/photo/\(announcement.creator.username)_128/1.png").responseImage { response in
-                if let image = response.result.value {
-                    cell.authorPictureView.image = image.af_imageRoundedIntoCircle()
-                }
-            }
-            
-            return cell
-        }
+        return cards[indexPath.row].tableViewCell(tableView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }

@@ -9,7 +9,6 @@
 import UIKit
 import QRCode
 
-// TODO: Dark status bar for this view.
 class CheckInController: UIViewController {
     @IBOutlet weak var ticketNameLabel: UILabel!
     @IBOutlet weak var ticketTypeLabel: UILabel!

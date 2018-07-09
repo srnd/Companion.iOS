@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,33 +25,90 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WelcomeCell" rowHeight="60" id="fTK-83-b4j" customClass="WelcomeViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WelcomeCell" rowHeight="100" id="fTK-83-b4j" customClass="WelcomeViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fTK-83-b4j" id="40z-S8-dYz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there, TJ!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2B-Wl-thj">
-                                                    <rect key="frame" x="15" y="19" width="345" height="22"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-Cj-8e5">
+                                                    <rect key="frame" x="61.333333333333343" y="19" width="253.00000000000003" height="62"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there, TJ!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2B-Wl-thj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="253" height="38.333333333333336"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="There are 23 days until CodeDay." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9O-CS-RBf" userLabel="Days until CodeDay">
+                                                            <rect key="frame" x="0.0" y="44.333333333333336" width="253" height="17.666666666666664"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="T2B-Wl-thj" secondAttribute="bottom" constant="8" id="IJS-DI-GAT"/>
-                                                <constraint firstItem="T2B-Wl-thj" firstAttribute="top" secondItem="40z-S8-dYz" secondAttribute="topMargin" constant="8" id="M3l-Cu-dNq"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="T2B-Wl-thj" secondAttribute="trailing" id="WR3-69-ntf"/>
-                                                <constraint firstItem="T2B-Wl-thj" firstAttribute="leading" secondItem="40z-S8-dYz" secondAttribute="leadingMargin" id="heP-Yc-sJF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="g1N-Cj-8e5" secondAttribute="bottom" constant="8" id="ODE-fn-Uto"/>
+                                                <constraint firstItem="g1N-Cj-8e5" firstAttribute="centerX" secondItem="40z-S8-dYz" secondAttribute="centerX" id="QPG-9o-pue"/>
+                                                <constraint firstItem="g1N-Cj-8e5" firstAttribute="top" secondItem="40z-S8-dYz" secondAttribute="topMargin" constant="8" id="bOc-vE-aNu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="daysUntilLabel" destination="L9O-CS-RBf" id="vyu-mO-vGV"/>
                                             <outlet property="welcomeLabel" destination="T2B-Wl-thj" id="oQe-zl-ewa"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SpotifyCell" rowHeight="138" id="YaX-7L-NOc" userLabel="SpotifyCell" customClass="SpotifyViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="138"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YaX-7L-NOc" id="N0R-M9-gAn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="137.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IZW-Gd-FG3">
+                                                    <rect key="frame" x="15" y="19" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Nqw-yz-bad"/>
+                                                        <constraint firstAttribute="height" constant="100" id="W1Q-N6-YOX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HwO-1K-vMr">
+                                                    <rect key="frame" x="131" y="41.666666666666671" width="103.33333333333331" height="54.666666666666671"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14h-J4-l2z">
+                                                            <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="26.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLZ-3Y-nTX">
+                                                            <rect key="frame" x="0.0" y="34.333333333333336" width="103.33333333333333" height="20.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="IZW-Gd-FG3" secondAttribute="bottom" constant="8" id="Uax-50-dSN"/>
+                                                <constraint firstItem="IZW-Gd-FG3" firstAttribute="leading" secondItem="N0R-M9-gAn" secondAttribute="leadingMargin" id="Ubc-ph-iet"/>
+                                                <constraint firstItem="HwO-1K-vMr" firstAttribute="centerY" secondItem="N0R-M9-gAn" secondAttribute="centerY" id="ozN-T7-zd9"/>
+                                                <constraint firstItem="HwO-1K-vMr" firstAttribute="leading" secondItem="IZW-Gd-FG3" secondAttribute="trailing" constant="16" id="p9E-sg-Uou"/>
+                                                <constraint firstItem="IZW-Gd-FG3" firstAttribute="top" secondItem="N0R-M9-gAn" secondAttribute="topMargin" constant="8" id="wg7-4n-at7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumArtImage" destination="IZW-Gd-FG3" id="x6Q-Me-eei"/>
+                                            <outlet property="artistLabel" destination="HLZ-3Y-nTX" id="mDN-YD-OIW"/>
+                                            <outlet property="titleLabel" destination="14h-J4-l2z" id="ipu-zw-pK0"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnnouncementCell" rowHeight="360" id="jv2-HA-vpS" customClass="AnnouncementViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="360"/>
+                                        <rect key="frame" x="0.0" y="266" width="375" height="360"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jv2-HA-vpS" id="pcn-gw-z1K">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="359.66666666666669"/>
@@ -76,15 +134,21 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="HNZ-2R-nyX">
                                                     <rect key="frame" x="15" y="67" width="345" height="274"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03t-ao-vpB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="223.33333333333334"/>
-                                                            <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
-                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03t-ao-vpB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="262"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment>
+                                                                    <string key="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRv-TZ-mv9">
-                                                            <rect key="frame" x="0.0" y="235.33333333333331" width="345" height="38.666666666666686"/>
+                                                            <rect key="frame" x="0.0" y="274" width="345" height="0.0"/>
                                                             <color key="backgroundColor" red="0.79607843137254897" green="0.47450980392156861" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <inset key="contentEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="12"/>
@@ -320,11 +384,35 @@
                         <outlet property="qrCodeView" destination="7hI-HS-s2z" id="9S2-oS-enl"/>
                         <outlet property="ticketNameLabel" destination="20x-EX-ET9" id="sp2-gz-zbe"/>
                         <outlet property="ticketTypeLabel" destination="BDt-Ab-4iL" id="66I-UB-DpG"/>
+                        <segue destination="igw-GL-eDf" kind="show" id="SUo-1W-Rdw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urY-l0-Yah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2572" y="0.0"/>
+        </scene>
+        <!--Self Check-in-->
+        <scene sceneID="CO6-ee-cJ5">
+            <objects>
+                <viewController title="Self Check-in" extendedLayoutIncludesOpaqueBars="YES" id="igw-GL-eDf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VuA-Ji-9k2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QeN-T7-XrB" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="CodeDay Red"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="h0G-jZ-Oak"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ZG-PQ-O0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3456.8000000000002" y="0.0"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="hO4-Mn-91V">
@@ -353,6 +441,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaf-u8-6tW">
                                         <rect key="frame" x="0.0" y="100.66666666666663" width="230" height="30"/>
                                         <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" textContentType="email"/>
                                         <connections>
                                             <action selector="returnKeyPressed:" destination="gH2-4c-hpj" eventType="primaryActionTriggered" id="d9H-x4-an3"/>
@@ -478,6 +567,9 @@
         <image name="baseline_check_black_24pt" width="24" height="24"/>
         <image name="baseline_dashboard_black_24pt" width="24" height="24"/>
         <image name="baseline_event_black_24pt" width="24" height="24"/>
+        <namedColor name="CodeDay Red">
+            <color red="0.79600000381469727" green="0.47499999403953552" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <color key="tintColor" red="0.79607843140000001" green="0.47450980390000003" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

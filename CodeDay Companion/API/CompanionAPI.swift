@@ -61,4 +61,15 @@ class CompanionAPI {
             }
         }
     }
+    
+    static func getNowPlaying(_ eventId: String, completion: @escaping (NowPlayingResponse?, Error?) -> Void) {
+        Alamofire.request(CompanionAPIRouter.getNowPlaying(eventId: eventId)).responseString { response in
+            do {
+                completion(try decodeResponse(NowPlayingResponse.self, res: response), nil)
+            } catch {
+                print("Companion API error: \(error)")
+                completion(nil, error)
+            }
+        }
+    }
 }

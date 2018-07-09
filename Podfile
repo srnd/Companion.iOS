@@ -9,6 +9,7 @@ target 'CodeDay Companion' do
   pod "AlamofireImage"
   pod "Disk"
   pod "QRCode"
+  pod "SwiftDate"
 
   target 'CodeDay CompanionTests' do
     inherit! :search_paths

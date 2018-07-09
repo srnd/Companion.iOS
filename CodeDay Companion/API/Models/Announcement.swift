@@ -12,10 +12,10 @@ struct Announcement : Codable {
         var text: String
     }
     
-    var id: String
-    var postedAt: Timestamp
+    var id: String?
+    var postedAt: Timestamp?
     var body: String
-    var urgency: Int
+    var urgency: Int?
     var link: AnnouncementLink?
     var creator: User
     
@@ -26,5 +26,11 @@ struct Announcement : Codable {
         case urgency
         case link
         case creator
+    }
+    
+    init(body: String, creator: User, link: AnnouncementLink?) {
+        self.body = body
+        self.creator = creator
+        self.link = link
     }
 }
