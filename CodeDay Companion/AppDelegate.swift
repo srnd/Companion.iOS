@@ -14,11 +14,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UIApplication.shared.delegate = self
+        
         SwiftDate.defaultRegion = Region(calendar: Calendars.gregorian, zone: Zones.current, locale: Locales.current)
+        
         if UserStore.getUserRegistration() != nil {
             self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as! MainController
         }
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        if let reg = UserStore.getUserRegistration() {
+            let tokenString = deviceToken.reduce("", { $0 + String(format: "%02X", $1) })
+            CompanionAPI.associateApns(ticketId: reg.id, apnsToken: tokenString, dev: Constants.APNS_DEVELOPMENT)
+        } else {
+            print("Unable to register for push notifications, could not deserialize user reg")
+        }
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Unable to register for push notifications")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -129,6 +129,7 @@
 		327215B020F2D4E800A13ABA /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		327215B320F2D71800A13ABA /* SpotifyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyViewCell.swift; sourceTree = "<group>"; };
 		327BE7DC20F259EC00F4E525 /* CheckInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInResponse.swift; sourceTree = "<group>"; };
+		32A84A3120F3FF2A00046DE9 /* CodeDay Companion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CodeDay Companion.entitlements"; sourceTree = "<group>"; };
 		32DF0B3620F1A2D30070FFFF /* WelcomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewCell.swift; sourceTree = "<group>"; };
 		32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewCell.swift; sourceTree = "<group>"; };
 		554791FEA8E1E18D7DDC5D65 /* Pods-CodeDay CompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay CompanionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay CompanionTests/Pods-CodeDay CompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +248,7 @@
 		3230100F20D58155006C7A53 /* CodeDay Companion */ = {
 			isa = PBXGroup;
 			children = (
+				32A84A3120F3FF2A00046DE9 /* CodeDay Companion.entitlements */,
 				327215A320F2CFD300A13ABA /* Cards */,
 				321368EB20F0D5BC00AD120B /* Cells */,
 				3210BA6B20F08DE6005C8A37 /* API */,
@@ -398,6 +400,11 @@
 				TargetAttributes = {
 					3230100C20D58155006C7A53 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					3230102220D58157006C7A53 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -754,6 +761,7 @@
 			baseConfigurationReference = 8180A0ED70815538619F4D7C /* Pods-CodeDay Companion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "CodeDay Companion/CodeDay Companion.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AN8JL7Z2TB;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -777,6 +785,7 @@
 			baseConfigurationReference = 15E1BB74E9B57DC7B84C3A86 /* Pods-CodeDay Companion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "CodeDay Companion/CodeDay Companion.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AN8JL7Z2TB;
 				FRAMEWORK_SEARCH_PATHS = (

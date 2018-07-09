@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class MainController : UITabBarController {
     private var reg: Registration?
@@ -28,6 +29,31 @@ class MainController : UITabBarController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(sync), name: .beginSync, object: nil)
         sync()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let shouldPrompt = !((UserDefaults.standard.object(forKey: "promptedNotifications") as? Bool) ?? false)
+        
+        UNUserNotificationCenter.current().getNotificationSettings() { settings in
+            if settings.alertSetting == .notSupported, shouldPrompt {
+                let alert = UIAlertController(title: "Get important notifications?", message: "During CodeDay, we can notify you of announcements from organizers as well as upcoming activities. Do you want to enable these?", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "No, thanks", style: .cancel) { action in
+                    UserDefaults.standard.set(true, forKey: "promptedNotifications")
+                })
+                
+                alert.addAction(UIAlertAction(title: "Sure!", style: .default) { action in
+                    UNUserNotificationCenter.current().requestAuthorization(options: [ .alert, .sound, .badge ]) { granted, error in
+                        guard granted else { return }
+                        DispatchQueue.main.async {
+                            UIApplication.shared.registerForRemoteNotifications()
+                        }
+                    }
+                })
+                
+                self.selectedViewController?.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     @objc private func sync() {

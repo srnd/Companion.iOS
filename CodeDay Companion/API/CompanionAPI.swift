@@ -72,4 +72,10 @@ class CompanionAPI {
             }
         }
     }
+    
+    static func associateApns(ticketId: String, apnsToken: String, dev: Bool) {
+        Alamofire.request(CompanionAPIRouter.associateApns(ticketId: ticketId, apnsToken: apnsToken, dev: dev)).responseString { response in
+            print(response)
+        }
+    }
 }
