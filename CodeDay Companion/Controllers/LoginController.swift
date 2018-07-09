@@ -20,12 +20,12 @@ class LoginController: UIViewController, BarcodeScannerCodeDelegate, BarcodeScan
     
     @IBAction func loginButtonPress(_ sender: UIButton) {
         loginButton.isEnabled = false
-        completeLoginWithEmail(email: emailField.text)
+        completeLoginWithEmail(email: emailField.text?.trim())
     }
     
     @IBAction func returnKeyPressed(_ sender: UITextField) {
         loginButton.isEnabled = false
-        completeLoginWithEmail(email: emailField.text)
+        completeLoginWithEmail(email: emailField.text?.trim())
     }
     
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {

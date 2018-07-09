@@ -18,7 +18,13 @@ class CheckInController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTicket), name: .syncFinished, object: nil)
+        reloadTicket()
+    }
+    
+    @objc func reloadTicket() {
         let reg = UserStore.getUserRegistration()
+        
         ticketNameLabel.text = "\(reg!.firstName)'s Ticket"
         ticketTypeLabel.text = reg!.type.rawValue
         eventNameLabel.text = reg!.event.name

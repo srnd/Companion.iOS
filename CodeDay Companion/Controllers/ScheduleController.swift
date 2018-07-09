@@ -82,6 +82,11 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadSchedule), name: .syncFinished, object: nil)
+        reloadSchedule()
+    }
+    
+    @objc func reloadSchedule() {
         let reg = UserStore.getUserRegistration()
         
         schedule = reg!.event.schedule.map { $1 }
@@ -102,7 +107,5 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    
 }
 

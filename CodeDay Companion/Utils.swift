@@ -45,3 +45,14 @@ class Utils {
         }
     }
 }
+
+extension Notification.Name {
+    static let syncFinished = Notification.Name("syncFinished")
+    static let beginSync = Notification.Name("beginSync")
+}
+
+extension String {
+    func trim() -> String {
+        return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
+    }
+}

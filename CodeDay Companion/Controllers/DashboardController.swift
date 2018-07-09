@@ -13,6 +13,8 @@ import AlamofireImage
 class DashboardController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
+    private var refreshControl = UIRefreshControl()
+    
     var announcements: [Announcement] = [ ]
     var cards: [DashboardCard] = [ ]
     var reg: Registration?
@@ -33,11 +35,18 @@ class DashboardController: UIViewController, UITableViewDataSource {
         
         reloadTableView()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: .syncFinished, object: nil)
+        
         // Load new announcements in
         refresh()
+        
+        refreshControl.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
-    private func refresh() {
+    @objc private func refresh() {
+        NotificationCenter.default.post(name: .beginSync, object: nil)
+        
         CompanionAPI.getAnnouncementsForEvent(reg!.event.id) { announcements, error in
             if error == nil {
                 var cachedAnnouncements = UserStore.getAnnouncements()
@@ -55,8 +64,6 @@ class DashboardController: UIViewController, UITableViewDataSource {
                     
                     self.announcements = cachedAnnouncements
                     self.reloadTableView()
-                    // sorry
-//                    self.tableView.reloadData()
                 }
             }
         }
@@ -71,15 +78,29 @@ class DashboardController: UIViewController, UITableViewDataSource {
         }
     }
     
-    private func reloadTableView() {
-//        tableView.beginUpdates()
+    @objc private func reloadTableView() {
+        // get the latest registration info
+        reg = UserStore.getUserRegistration()
         
         // Empty out the cards except for our welcome one
         cards = [ WelcomeCard() ]
         
         if nowPlaying != nil {
             cards.append(SpotifyCard(nowPlaying!))
-//            tableView.insertRows(at: [ IndexPath(row: cards.count - 1, section: 0) ], with: UITableViewRowAnimation.fade)
+        }
+        
+        if !(reg?.hasAge ?? false) || !(reg?.hasParent ?? false) {
+            cards.append(AnnouncementCard(Announcement(
+                body: "I noticed you haven't filled out your age and parent info yet. Please do this before the event so you don't have to at the door!",
+                creator: User(username: "johnpeter", name: "John Peter"),
+                link: Announcement.AnnouncementLink(url: "https://codeday.vip/\(reg!.id)/parent", text: "Fill out info")
+            )))
+        } else if !(reg?.hasWaiver ?? false) {
+            cards.append(AnnouncementCard(Announcement(
+                body: "You still need to sign your waiver! If you don't do this now, you'll need to do it at the door (and that's no fun).",
+                creator: User(username: "johnpeter", name: "John Peter"),
+                link: Announcement.AnnouncementLink(url: "https://codeday.vip/\(reg!.id)/waiver", text: "Sign waiver")
+            )))
         }
         
         if !Utils.isItCodeDay() && Utils.daysUntilCodeDay() > 0 {
@@ -108,7 +129,7 @@ class DashboardController: UIViewController, UITableViewDataSource {
             cards.append(AnnouncementCard(announcement))
         }
         
-//        tableView.endUpdates()
+        self.refreshControl.endRefreshing()
         tableView.reloadData()
     }
     
