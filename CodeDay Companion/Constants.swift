@@ -14,5 +14,5 @@ struct Constants {
     static let ANNOUNCEMENTS_FILE = "announcements.json"
     static let CHECKIN_INFO_FILE = "checkin.json"
     static let USER_REGISTRATION_DIRECTORY = Disk.Directory.applicationSupport
-    static let APNS_DEVELOPMENT = true
+    static let APNS_DEVELOPMENT = false
 }
