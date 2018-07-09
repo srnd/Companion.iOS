@@ -56,7 +56,7 @@ class DashboardController: UIViewController, UITableViewDataSource {
                     self.announcements = cachedAnnouncements
                     self.reloadTableView()
                     // sorry
-                    self.tableView.reloadData()
+//                    self.tableView.reloadData()
                 }
             }
         }
@@ -72,14 +72,14 @@ class DashboardController: UIViewController, UITableViewDataSource {
     }
     
     private func reloadTableView() {
-        tableView.beginUpdates()
+//        tableView.beginUpdates()
         
         // Empty out the cards except for our welcome one
         cards = [ WelcomeCard() ]
         
         if nowPlaying != nil {
             cards.append(SpotifyCard(nowPlaying!))
-            tableView.insertRows(at: [ IndexPath(row: cards.count - 1, section: 0) ], with: UITableViewRowAnimation.fade)
+//            tableView.insertRows(at: [ IndexPath(row: cards.count - 1, section: 0) ], with: UITableViewRowAnimation.fade)
         }
         
         if !Utils.isItCodeDay() && Utils.daysUntilCodeDay() > 0 {
@@ -108,7 +108,8 @@ class DashboardController: UIViewController, UITableViewDataSource {
             cards.append(AnnouncementCard(announcement))
         }
         
-        tableView.endUpdates()
+//        tableView.endUpdates()
+        tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

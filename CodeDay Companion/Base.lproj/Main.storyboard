@@ -33,7 +33,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-Cj-8e5">
-                                                    <rect key="frame" x="61.666666666666657" y="19" width="252.99999999999997" height="62"/>
+                                                    <rect key="frame" x="61.333333333333343" y="19" width="253.00000000000003" height="62"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there, TJ!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2B-Wl-thj">
                                                             <rect key="frame" x="0.0" y="0.0" width="253" height="38.333333333333336"/>
@@ -403,7 +403,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-3d-9Yx">
-                                        <rect key="frame" x="8" y="52" width="37" height="30"/>
+                                        <rect key="frame" x="14" y="52" width="37" height="30"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -412,16 +412,16 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezp-BR-Cmd" userLabel="Ticket">
-                                        <rect key="frame" x="67" y="286" width="240" height="240"/>
+                                        <rect key="frame" x="67.666666666666686" y="286" width="240" height="240"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendee Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-Sn-jkM">
-                                                <rect key="frame" x="54.666666666666671" y="29" width="131.66666666666663" height="27"/>
+                                                <rect key="frame" x="54.666666666666657" y="29" width="131.66666666666666" height="27"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_check_black_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="qpG-86-66B">
-                                                <rect key="frame" x="78" y="70" width="84" height="84"/>
+                                                <rect key="frame" x="77.999999999999986" y="70" width="84.000000000000014" height="84"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="84" id="hmx-cM-BIU"/>
@@ -432,7 +432,7 @@
                                                 <rect key="frame" x="46.333333333333329" y="167" width="147.33333333333337" height="57.666666666666657"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73U-4d-o56" userLabel="Secret Code!">
-                                                        <rect key="frame" x="45.000000000000014" y="0.0" width="57.666666666666671" height="27.333333333333332"/>
+                                                        <rect key="frame" x="45" y="0.0" width="57.666666666666657" height="27.333333333333332"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="ABCD">
                                                                 <attributes>
@@ -476,7 +476,7 @@
                                 <color key="backgroundColor" name="CodeDay Red"/>
                                 <constraints>
                                     <constraint firstItem="ezp-BR-Cmd" firstAttribute="centerX" secondItem="QeN-T7-XrB" secondAttribute="centerX" id="7tq-s2-Sdw"/>
-                                    <constraint firstItem="6dU-3d-9Yx" firstAttribute="leading" secondItem="QeN-T7-XrB" secondAttribute="leadingMargin" id="TlQ-a1-EJ2"/>
+                                    <constraint firstItem="6dU-3d-9Yx" firstAttribute="leading" secondItem="QeN-T7-XrB" secondAttribute="leadingMargin" constant="6" id="TlQ-a1-EJ2"/>
                                     <constraint firstItem="ezp-BR-Cmd" firstAttribute="centerY" secondItem="QeN-T7-XrB" secondAttribute="centerY" id="g9Y-P1-29G"/>
                                     <constraint firstItem="6dU-3d-9Yx" firstAttribute="top" secondItem="QeN-T7-XrB" secondAttribute="topMargin" id="vA8-Xa-dK0"/>
                                 </constraints>

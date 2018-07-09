@@ -13,7 +13,9 @@ class MainController : UITabBarController {
         super.viewDidLoad()
         UserStore.preCacheUser()
         
-        if !Utils.isItCodeDay() {
+        let reg = UserStore.getUserRegistration()
+        
+        if !Utils.isItCodeDay(), reg?.type != .volunteer {
             let arrayOfTabBarItems = self.tabBar.items
 
             if let barItems = arrayOfTabBarItems, barItems.count > 0 {
