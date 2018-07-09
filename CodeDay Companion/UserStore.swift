@@ -8,9 +8,11 @@
 
 import Disk
 
+// TODO: Clean this up a lot. it is messy. bad.
 class UserStore {
     private static var cachedUser: Registration?
     private static var cachedAnnouncements: [Announcement]?
+    private static var cachedCheckInInfo: CheckInResponse?
     
     static func preCacheUser() {
         print("Pre-caching user")
@@ -71,6 +73,31 @@ class UserStore {
             return true
         } catch {
             print("Error setting announcements: \(error)")
+            return false
+        }
+    }
+    
+    static func getCheckInInfo() -> CheckInResponse? {
+        if cachedCheckInInfo == nil {
+            do {
+                let info = try Disk.retrieve(Constants.CHECKIN_INFO_FILE, from: Constants.USER_REGISTRATION_DIRECTORY, as: CheckInResponse.self)
+                cachedCheckInInfo = info
+                return info
+            } catch {
+                return nil
+            }
+        } else {
+            return cachedCheckInInfo!
+        }
+    }
+    
+    static func setCheckInInfo(_ info: CheckInResponse) -> Bool {
+        do {
+            try Disk.save(info, to: Constants.USER_REGISTRATION_DIRECTORY, as: Constants.CHECKIN_INFO_FILE)
+            cachedCheckInInfo = info
+            return true
+        } catch {
+            print("Error setting check-in info: \(error)")
             return false
         }
     }

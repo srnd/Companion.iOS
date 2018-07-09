@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WelcomeCell" rowHeight="100" id="fTK-83-b4j" customClass="WelcomeViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WelcomeCell" rowHeight="100" id="fTK-83-b4j" customClass="WelcomeViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fTK-83-b4j" id="40z-S8-dYz">
@@ -33,7 +33,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-Cj-8e5">
-                                                    <rect key="frame" x="61.333333333333343" y="19" width="253.00000000000003" height="62"/>
+                                                    <rect key="frame" x="61.666666666666657" y="19" width="252.99999999999997" height="62"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there, TJ!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2B-Wl-thj">
                                                             <rect key="frame" x="0.0" y="0.0" width="253" height="38.333333333333336"/>
@@ -61,7 +61,7 @@
                                             <outlet property="welcomeLabel" destination="T2B-Wl-thj" id="oQe-zl-ewa"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SpotifyCell" rowHeight="138" id="YaX-7L-NOc" userLabel="SpotifyCell" customClass="SpotifyViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SpotifyCell" rowHeight="138" id="YaX-7L-NOc" userLabel="SpotifyCell" customClass="SpotifyViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="375" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YaX-7L-NOc" id="N0R-M9-gAn">
@@ -107,11 +107,11 @@
                                             <outlet property="titleLabel" destination="14h-J4-l2z" id="ipu-zw-pK0"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnnouncementCell" rowHeight="360" id="jv2-HA-vpS" customClass="AnnouncementViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="266" width="375" height="360"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnnouncementCell" rowHeight="400" id="jv2-HA-vpS" customClass="AnnouncementViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="266" width="375" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jv2-HA-vpS" id="pcn-gw-z1K">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="359.66666666666669"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="399.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2D-Mk-sCe">
@@ -132,10 +132,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="HNZ-2R-nyX">
-                                                    <rect key="frame" x="15" y="67" width="345" height="274"/>
+                                                    <rect key="frame" x="15" y="67" width="345" height="314"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03t-ao-vpB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="262"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="263.33333333333331"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment>
                                                                     <string key="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
@@ -148,7 +148,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRv-TZ-mv9">
-                                                            <rect key="frame" x="0.0" y="274" width="345" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="275.33333333333331" width="345" height="38.666666666666686"/>
                                                             <color key="backgroundColor" red="0.79607843137254897" green="0.47450980392156861" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <inset key="contentEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="12"/>
@@ -227,7 +227,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActivityCell" rowHeight="110" id="YQ5-Pc-dhr" customClass="ActivityViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActivityCell" rowHeight="110" id="YQ5-Pc-dhr" customClass="ActivityViewCell" customModule="CodeDay_Companion" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YQ5-Pc-dhr" id="VGZ-m1-qk0">
@@ -384,7 +384,7 @@
                         <outlet property="qrCodeView" destination="7hI-HS-s2z" id="9S2-oS-enl"/>
                         <outlet property="ticketNameLabel" destination="20x-EX-ET9" id="sp2-gz-zbe"/>
                         <outlet property="ticketTypeLabel" destination="BDt-Ab-4iL" id="66I-UB-DpG"/>
-                        <segue destination="igw-GL-eDf" kind="show" id="SUo-1W-Rdw"/>
+                        <segue destination="igw-GL-eDf" kind="showDetail" identifier="selfCheckIn" id="SUo-1W-Rdw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urY-l0-Yah" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,25 +394,115 @@
         <!--Self Check-in-->
         <scene sceneID="CO6-ee-cJ5">
             <objects>
-                <viewController title="Self Check-in" extendedLayoutIncludesOpaqueBars="YES" id="igw-GL-eDf" sceneMemberID="viewController">
+                <viewController title="Self Check-in" extendedLayoutIncludesOpaqueBars="YES" id="igw-GL-eDf" customClass="SelfCheckInController" customModule="CodeDay_Companion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VuA-Ji-9k2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QeN-T7-XrB" userLabel="Background">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeN-T7-XrB" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-3d-9Yx">
+                                        <rect key="frame" x="8" y="52" width="37" height="30"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneTapped:" destination="igw-GL-eDf" eventType="touchUpInside" id="oDR-ag-zXe"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezp-BR-Cmd" userLabel="Ticket">
+                                        <rect key="frame" x="67" y="286" width="240" height="240"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendee Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-Sn-jkM">
+                                                <rect key="frame" x="54.666666666666671" y="29" width="131.66666666666663" height="27"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_check_black_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="qpG-86-66B">
+                                                <rect key="frame" x="78" y="70" width="84" height="84"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="84" id="hmx-cM-BIU"/>
+                                                    <constraint firstAttribute="height" constant="84" id="vmn-Oa-qns"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T3W-gR-9s3">
+                                                <rect key="frame" x="46.333333333333329" y="167" width="147.33333333333337" height="57.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73U-4d-o56" userLabel="Secret Code!">
+                                                        <rect key="frame" x="45.000000000000014" y="0.0" width="57.666666666666671" height="27.333333333333332"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="ABCD">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="24" name="CourierNewPS-BoldMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="June 24, 2018 1:32:23 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ0-N1-zVq" userLabel="Date">
+                                                        <rect key="frame" x="0.0" y="35.333333333333314" width="147.33333333333334" height="22.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="9Nc-tg-vME"/>
+                                            <constraint firstItem="T3W-gR-9s3" firstAttribute="centerX" secondItem="ezp-BR-Cmd" secondAttribute="centerX" id="Bnv-vy-DkW"/>
+                                            <constraint firstItem="T3W-gR-9s3" firstAttribute="top" secondItem="qpG-86-66B" secondAttribute="bottom" constant="13" id="LQp-eS-0kV"/>
+                                            <constraint firstItem="qpG-86-66B" firstAttribute="top" secondItem="vTe-Sn-jkM" secondAttribute="bottom" constant="14" id="Rjn-a2-o80"/>
+                                            <constraint firstItem="vTe-Sn-jkM" firstAttribute="centerX" secondItem="ezp-BR-Cmd" secondAttribute="centerX" id="VbL-Js-JEL"/>
+                                            <constraint firstAttribute="bottom" secondItem="T3W-gR-9s3" secondAttribute="bottom" constant="15" id="YNH-fy-7kg"/>
+                                            <constraint firstItem="vTe-Sn-jkM" firstAttribute="top" relation="lessThanOrEqual" secondItem="ezp-BR-Cmd" secondAttribute="top" constant="29" id="dIp-ly-osm"/>
+                                            <constraint firstAttribute="width" constant="240" id="jgY-Rg-I55"/>
+                                            <constraint firstItem="qpG-86-66B" firstAttribute="centerX" secondItem="ezp-BR-Cmd" secondAttribute="centerX" id="qUQ-6p-mFs"/>
+                                            <constraint firstItem="qpG-86-66B" firstAttribute="centerY" secondItem="ezp-BR-Cmd" secondAttribute="centerY" constant="-8" id="teP-CB-nkb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" name="CodeDay Red"/>
+                                <constraints>
+                                    <constraint firstItem="ezp-BR-Cmd" firstAttribute="centerX" secondItem="QeN-T7-XrB" secondAttribute="centerX" id="7tq-s2-Sdw"/>
+                                    <constraint firstItem="6dU-3d-9Yx" firstAttribute="leading" secondItem="QeN-T7-XrB" secondAttribute="leadingMargin" id="TlQ-a1-EJ2"/>
+                                    <constraint firstItem="ezp-BR-Cmd" firstAttribute="centerY" secondItem="QeN-T7-XrB" secondAttribute="centerY" id="g9Y-P1-29G"/>
+                                    <constraint firstItem="6dU-3d-9Yx" firstAttribute="top" secondItem="QeN-T7-XrB" secondAttribute="topMargin" id="vA8-Xa-dK0"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QeN-T7-XrB" firstAttribute="top" secondItem="VuA-Ji-9k2" secondAttribute="top" id="1Eu-OF-zZI"/>
+                            <constraint firstAttribute="trailing" secondItem="QeN-T7-XrB" secondAttribute="trailing" id="8wf-bv-ksT"/>
+                            <constraint firstItem="QeN-T7-XrB" firstAttribute="leading" secondItem="VuA-Ji-9k2" secondAttribute="leading" id="BQZ-tN-Pzd"/>
+                            <constraint firstAttribute="bottom" secondItem="QeN-T7-XrB" secondAttribute="bottom" id="t3e-og-LZx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h0G-jZ-Oak"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <connections>
+                        <outlet property="attendeeNameLabel" destination="vTe-Sn-jkM" id="0bJ-E9-MFk"/>
+                        <outlet property="backgroundView" destination="QeN-T7-XrB" id="dcf-2g-Bdu"/>
+                        <outlet property="codeLabel" destination="73U-4d-o56" id="6t7-EW-QcF"/>
+                        <outlet property="dateLabel" destination="bQ0-N1-zVq" id="BwM-Xk-JKq"/>
+                        <outlet property="ticketView" destination="ezp-BR-Cmd" id="OL0-ii-dAG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ZG-PQ-O0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3456.8000000000002" y="0.0"/>
+            <point key="canvasLocation" x="3501.5999999999999" y="0.0"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="hO4-Mn-91V">
@@ -423,7 +513,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="nna-hu-MyU">
-                                <rect key="frame" x="73" y="316.66666666666669" width="230" height="178.66666666666669"/>
+                                <rect key="frame" x="72.666666666666686" y="316.66666666666669" width="230" height="178.66666666666669"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CodeDay Logotype" translatesAutoresizingMaskIntoConstraints="NO" id="crU-hm-6z7">
                                         <rect key="frame" x="0.0" y="0.0" width="230" height="44.333333333333336"/>
@@ -433,7 +523,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email to continue." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4c-pA-HvV">
-                                        <rect key="frame" x="5.6666666666666714" y="62.333333333333321" width="218.66666666666663" height="20.333333333333336"/>
+                                        <rect key="frame" x="5.6666666666666572" y="62.333333333333321" width="218.66666666666666" height="20.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -565,6 +655,7 @@
     <resources>
         <image name="CodeDay Logotype" width="874" height="168"/>
         <image name="baseline_check_black_24pt" width="24" height="24"/>
+        <image name="baseline_check_black_48pt" width="48" height="48"/>
         <image name="baseline_dashboard_black_24pt" width="24" height="24"/>
         <image name="baseline_event_black_24pt" width="24" height="24"/>
         <namedColor name="CodeDay Red">

@@ -30,9 +30,29 @@ class CheckInController: UIViewController {
     }
     
     @IBAction func openSelfCheckIn(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Coming soon :)", message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        self.present(alert, animated: true, completion: nil)
+        if UserStore.getCheckInInfo() == nil, let reg = UserStore.getUserRegistration() {
+            let loadingAlert = Utils.loadingAlert("Checking you in...")
+            present(loadingAlert, animated: true, completion: nil)
+            
+            CompanionAPI.checkInTicketId(reg.id) { response, error in
+                loadingAlert.dismiss(animated: false) {
+                    if error == nil, response?.ok ?? false {
+                        UserStore.setCheckInInfo(response!)
+                        self.performSegue(withIdentifier: "selfCheckIn", sender: nil)
+                    } else if error == nil {
+                        let alert = UIAlertController(title: "Couldn't check you in.", message: "Error: " + (response?.error ?? "Unknown error, try again."), preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default))
+                        self.present(alert, animated: true, completion: nil)
+                    } else {
+                        let alert = UIAlertController(title: "Couldn't check you in.", message: "Something really bad and unexpected happened. Please try again.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+        } else {
+            self.performSegue(withIdentifier: "selfCheckIn", sender: nil)
+        }
     }
     
     override func didReceiveMemoryWarning() {

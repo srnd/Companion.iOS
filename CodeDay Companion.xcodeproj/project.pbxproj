@@ -34,6 +34,7 @@
 		3230101D20D58157006C7A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3230101B20D58157006C7A53 /* LaunchScreen.storyboard */; };
 		3230102820D58157006C7A53 /* CodeDay_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230102720D58157006C7A53 /* CodeDay_CompanionTests.swift */; };
 		3230103320D58157006C7A53 /* CodeDay_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230103220D58157006C7A53 /* CodeDay_CompanionUITests.swift */; };
+		3234B99620F3136000CE85CF /* SelfCheckInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3234B99520F3136000CE85CF /* SelfCheckInController.swift */; };
 		324A66FEC76E5E58AF1EFB3D /* Pods_CodeDay_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E50B2C289B72B5DCDB82353 /* Pods_CodeDay_Companion.framework */; };
 		325F66B020F07C6B00BF9A08 /* CheckInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F66AF20F07C6B00BF9A08 /* CheckInController.swift */; };
 		325F66B320F07CAA00BF9A08 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325F66B220F07CAA00BF9A08 /* LoginController.swift */; };
@@ -116,6 +117,7 @@
 		3230102E20D58157006C7A53 /* CodeDay CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodeDay CompanionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3230103220D58157006C7A53 /* CodeDay_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDay_CompanionUITests.swift; sourceTree = "<group>"; };
 		3230103420D58157006C7A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3234B99520F3136000CE85CF /* SelfCheckInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCheckInController.swift; sourceTree = "<group>"; };
 		325F66AF20F07C6B00BF9A08 /* CheckInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInController.swift; sourceTree = "<group>"; };
 		325F66B220F07CAA00BF9A08 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		327215A420F2CFE800A13ABA /* DashboardCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCard.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				325F66AF20F07C6B00BF9A08 /* CheckInController.swift */,
 				325F66B220F07CAA00BF9A08 /* LoginController.swift */,
 				3201EE2820F0CACD003D0727 /* MainController.swift */,
+				3234B99520F3136000CE85CF /* SelfCheckInController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3234B99620F3136000CE85CF /* SelfCheckInController.swift in Sources */,
 				327215A720F2D08100A13ABA /* SpotifyCard.swift in Sources */,
 				3230101520D58155006C7A53 /* ScheduleController.swift in Sources */,
 				3210BA7620F09B84005C8A37 /* Event.swift in Sources */,

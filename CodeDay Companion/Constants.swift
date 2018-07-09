@@ -12,5 +12,6 @@ struct Constants {
     static let API_BASE = "https://app.codeday.vip/api"
     static let USER_REGISTRATION_FILE = "user.json"
     static let ANNOUNCEMENTS_FILE = "announcements.json"
+    static let CHECKIN_INFO_FILE = "checkin.json"
     static let USER_REGISTRATION_DIRECTORY = Disk.Directory.applicationSupport
 }
