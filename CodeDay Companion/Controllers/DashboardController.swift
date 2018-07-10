@@ -133,7 +133,7 @@ class DashboardController: UIViewController, UITableViewDataSource {
         
         if !Utils.isItCodeDay() && Utils.daysUntilCodeDay() > 0 {
             cards.append(AnnouncementCard(Announcement(
-                body: "Are you excited for CodeDay, \(reg!.firstName)? I know I am. It's is a lot more fun with friends, so why not invite them?",
+                body: "Are you excited for CodeDay, \(reg!.firstName)? I know I am. It's a lot more fun with friends, so why not invite them?",
                 creator: User(username: "johnpeter", name: "John Peter"),
                 link: Announcement.AnnouncementLink(url: "https://codeday.org/share", text: "Share CodeDay")
             )))
