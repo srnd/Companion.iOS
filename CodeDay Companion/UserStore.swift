@@ -16,6 +16,9 @@ class UserStore {
     
     static func clearUserData() -> Bool {
         do {
+            cachedUser = nil
+            cachedAnnouncements = nil
+            cachedCheckInInfo = nil
             try Disk.clear(Constants.USER_REGISTRATION_DIRECTORY)
             return true
         } catch {

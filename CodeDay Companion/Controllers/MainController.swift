@@ -38,11 +38,11 @@ class MainController : UITabBarController {
             if settings.alertSetting == .notSupported, shouldPrompt {
                 let alert = UIAlertController(title: "Get important notifications?", message: "During CodeDay, we can notify you of announcements from organizers as well as upcoming activities. Do you want to enable these?", preferredStyle: .alert)
                 
-                alert.addAction(UIAlertAction(title: "No, thanks", style: .default) { action in
+                alert.addAction(UIAlertAction(title: "No, thanks", style: .cancel) { action in
                     UserDefaults.standard.set(true, forKey: "promptedNotifications")
                 })
                 
-                alert.addAction(UIAlertAction(title: "Sure!", style: .cancel) { action in
+                alert.addAction(UIAlertAction(title: "Sure!", style: .default) { action in
                     UNUserNotificationCenter.current().requestAuthorization(options: [ .alert, .sound, .badge ]) { granted, error in
                         guard granted else { return }
                         DispatchQueue.main.async {
