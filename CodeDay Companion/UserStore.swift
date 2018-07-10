@@ -14,8 +14,16 @@ class UserStore {
     private static var cachedAnnouncements: [Announcement]?
     private static var cachedCheckInInfo: CheckInResponse?
     
+    static func clearUserData() -> Bool {
+        do {
+            try Disk.clear(Constants.USER_REGISTRATION_DIRECTORY)
+            return true
+        } catch {
+            return false
+        }
+    }
+    
     static func preCacheUser() {
-        print("Pre-caching user")
         if cachedUser == nil {
             do {
                 let reg = try Disk.retrieve(Constants.USER_REGISTRATION_FILE, from: Constants.USER_REGISTRATION_DIRECTORY, as: Registration.self)

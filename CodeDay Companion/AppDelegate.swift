@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         if let reg = UserStore.getUserRegistration() {
             let tokenString = deviceToken.reduce("", { $0 + String(format: "%02X", $1) })
+            print(tokenString)
             CompanionAPI.associateApns(ticketId: reg.id, apnsToken: tokenString, dev: Constants.APNS_DEVELOPMENT)
         } else {
             print("Unable to register for push notifications, could not deserialize user reg")

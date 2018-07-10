@@ -22,6 +22,6 @@ struct Timestamp : Codable {
     }
     
     func toDate() -> DateInRegion {
-        return self.date.toDate()!
+        return self.date.toDate("yyyy-MM-dd HH:mm:ss.000000")!
     }
 }

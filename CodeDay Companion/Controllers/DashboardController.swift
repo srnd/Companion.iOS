@@ -24,8 +24,32 @@ class DashboardController: UIViewController, UITableViewDataSource {
         return .lightContent
     }
     
+    @objc func logOut() {
+        let alert = UIAlertController(title: "Log out?", message: "Are you sure you want to log out?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        alert.addAction(UIAlertAction(title: "Log Out", style: .default) { action in
+            if UserStore.clearUserData() {
+                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginController") as! LoginController
+            } else {
+                let errorAlert = UIAlertController(title: "Error", message: "Couldn't log you out, sorry.", preferredStyle: .alert)
+                errorAlert.addAction(UIAlertAction(title: "Oh okay", style: .default))
+                self.present(errorAlert, animated: true, completion: nil)
+            }
+        })
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let logOutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+        logOutButton.tintColor = UIColor.white
+        
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = logOutButton
+        
         reg = UserStore.getUserRegistration()
         
         self.announcements = UserStore.getAnnouncements()
@@ -60,6 +84,10 @@ class DashboardController: UIViewController, UITableViewDataSource {
                 }
                 
                 if dirty {
+                    cachedAnnouncements = cachedAnnouncements.sorted() { a, b in
+                        return a.postedAt!.toDate() > b.postedAt!.toDate()
+                    }
+
                     UserStore.setAnnouncements(cachedAnnouncements)
                     
                     self.announcements = cachedAnnouncements

@@ -25,9 +25,9 @@ struct Registration : Codable {
     var name: String
     var firstName: String
     var lastName: String
-    var profileImage: String
+    var profileImage: String?
     var type: RegistrationType
-    var checkedInAt: Timestamp
+    var checkedInAt: Timestamp?
     var hasAge: Bool
     var hasParent: Bool
     var hasWaiver: Bool
