@@ -51,8 +51,8 @@ class SelfCheckInController : UIViewController {
         attendeeNameLabel.text = reg?.name ?? "DO NOT ADMIT!"
         
         let attrs = codeLabel.attributedText?.mutableCopy() as! NSMutableAttributedString
-        attrs.addAttribute(.kern, value: 10, range: NSRange(location: 0, length: 3))
         attrs.mutableString.setString(checkIn?.code ?? "FAKE")
+        attrs.addAttribute(.kern, value: 10, range: NSMakeRange(0, 3))
         codeLabel.attributedText = attrs
         
         ticketView.layer.shadowColor = UIColor.black.cgColor
