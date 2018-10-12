@@ -73,6 +73,17 @@ class CompanionAPI {
         }
     }
     
+    static func getRegionsAttended(_ ticketId: String, completion: @escaping ([String]?, Error?) -> Void) {
+        Alamofire.request(CompanionAPIRouter.getRegionsAttended(ticketId: ticketId)).responseString { response in
+            do {
+                completion(try decodeResponse([String].self, res: response), nil)
+            } catch {
+                print("Companion API error: \(error)")
+                completion(nil, error)
+            }
+        }
+    }
+    
     static func associateApns(ticketId: String, apnsToken: String, dev: Bool) {
         Alamofire.request(CompanionAPIRouter.associateApns(ticketId: ticketId, apnsToken: apnsToken, dev: dev)).responseString { response in
             print(response)

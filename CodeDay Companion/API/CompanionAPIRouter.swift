@@ -16,6 +16,7 @@ enum CompanionAPIRouter : URLRequestConvertible {
     case getEventAnnouncements(eventId: String)
     case checkIn(ticketId: String)
     case getNowPlaying(eventId: String)
+    case getRegionsAttended(ticketId: String)
     case associateApns(ticketId: String, apnsToken: String, dev: Bool)
     
     func asURLRequest() throws -> URLRequest {
@@ -31,6 +32,8 @@ enum CompanionAPIRouter : URLRequestConvertible {
                 return ("/checkin/\(ticketId)", [:])
             case let .getNowPlaying(eventId):
                 return ("/nowplaying/\(eventId)", [:])
+            case let .getRegionsAttended(ticketId):
+                return ("/regions_attended/\(ticketId)", [:])
             case let .associateApns(ticketId, apnsToken, dev):
                 return ("/associate", [
                     "id": ticketId,

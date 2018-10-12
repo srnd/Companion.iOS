@@ -57,6 +57,14 @@ class MainController : UITabBarController {
     }
     
     @objc private func sync() {
+        CompanionAPI.getRegionsAttended(reg!.id) { res, error in
+            if res != nil {
+                let sharedDefaults = UserDefaults(suiteName: "group.srnd.codeday")
+                sharedDefaults?.set(res, forKey: "sticker_regions")
+                sharedDefaults?.synchronize()
+            }
+        }
+        
         // TODO: move this sync code somewhere else? idk how ios does things lol
         // but android has a really nice built-in sync adapter
         CompanionAPI.getRegistrationById(reg!.id) { newReg, error in

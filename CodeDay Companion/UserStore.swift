@@ -20,6 +20,11 @@ class UserStore {
             cachedAnnouncements = nil
             cachedCheckInInfo = nil
             try Disk.clear(Constants.USER_REGISTRATION_DIRECTORY)
+            
+            let sharedDefaults = UserDefaults(suiteName: "group.srnd.codeday")
+            sharedDefaults?.set([ ], forKey: "sticker_regions")
+            sharedDefaults?.synchronize()
+            
             return true
         } catch {
             return false
