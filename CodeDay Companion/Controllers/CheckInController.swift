@@ -8,6 +8,7 @@
 
 import UIKit
 import QRCode
+import PassKit
 
 class CheckInController: UIViewController {
     @IBOutlet weak var ticketNameLabel: UILabel!

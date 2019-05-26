@@ -68,6 +68,7 @@
 		327215B420F2D71800A13ABA /* SpotifyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327215B320F2D71800A13ABA /* SpotifyViewCell.swift */; };
 		327BE7DD20F259EC00F4E525 /* CheckInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BE7DC20F259EC00F4E525 /* CheckInResponse.swift */; };
 		32DF0B3720F1A2D30070FFFF /* WelcomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DF0B3620F1A2D30070FFFF /* WelcomeViewCell.swift */; };
+		32DF4B62217125E40030774D /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DF4B61217125E40030774D /* PassKit.framework */; };
 		32EEEF2920F0F470001A3AF9 /* ActivityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */; };
 		CAD05CBEAF84EC96BBE03FBC /* Pods_CodeDay_CompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12ADFCE757A309A75CC1329 /* Pods_CodeDay_CompanionUITests.framework */; };
 /* End PBXBuildFile section */
@@ -191,6 +192,7 @@
 		327BE7DC20F259EC00F4E525 /* CheckInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInResponse.swift; sourceTree = "<group>"; };
 		32A84A3120F3FF2A00046DE9 /* CodeDay Companion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CodeDay Companion.entitlements"; sourceTree = "<group>"; };
 		32DF0B3620F1A2D30070FFFF /* WelcomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewCell.swift; sourceTree = "<group>"; };
+		32DF4B61217125E40030774D /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		32EEEF2820F0F470001A3AF9 /* ActivityViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewCell.swift; sourceTree = "<group>"; };
 		554791FEA8E1E18D7DDC5D65 /* Pods-CodeDay CompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay CompanionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay CompanionTests/Pods-CodeDay CompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8180A0ED70815538619F4D7C /* Pods-CodeDay Companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeDay Companion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeDay Companion/Pods-CodeDay Companion.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32DF4B62217125E40030774D /* PassKit.framework in Frameworks */,
 				322320FC2166E61200BFF9C8 /* Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +428,7 @@
 		E297C4F4067186358BD7D3C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32DF4B61217125E40030774D /* PassKit.framework */,
 				8E50B2C289B72B5DCDB82353 /* Pods_CodeDay_Companion.framework */,
 				C40F7727CD801B36CCD9C311 /* Pods_CodeDay_CompanionTests.framework */,
 				C12ADFCE757A309A75CC1329 /* Pods_CodeDay_CompanionUITests.framework */,
@@ -527,6 +531,9 @@
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Wallet = {
 								enabled = 1;
 							};
 						};

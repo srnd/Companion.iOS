@@ -82,6 +82,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         NotificationCenter.default.addObserver(self, selector: #selector(reloadSchedule), name: .syncFinished, object: nil)
         reloadSchedule()
     }

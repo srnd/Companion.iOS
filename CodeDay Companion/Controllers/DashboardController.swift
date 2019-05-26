@@ -49,6 +49,7 @@ class DashboardController: UIViewController, UITableViewDataSource {
         logOutButton.tintColor = UIColor.white
         
         navigationController?.navigationBar.topItem?.rightBarButtonItem = logOutButton
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         reg = UserStore.getUserRegistration()
         
